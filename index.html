@@ -6,6 +6,7 @@
     <title>Bootstrap demo</title>
     <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
     <link rel="stylesheet" href="style.css">
+    
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,144 +14,227 @@
       crossorigin="anonymous" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg py-4 py-lg-0 shadow">
-      <div class="container px-4">
-        <img src="assests/images/logo.jpg" alt class="logo-img" />
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#top-navbar"
-          aria-controls="top-navbar">
-          <i class="lni lni-menu-hamburger-1"></i>
-        </button>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="top-navbar"
-          aria-labelledby="top-navbar">
-          <button
-            class="navbar-toggler border-0"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#top-navbar"
-            aria-controls="top-navbar">
-            <div class="d-flex justify-content-between p-3">
-              <img src="assests/images/logo.jpg" alt>
-              <i class="lni lni-menu-hamburger-1"></i>
+    <!-- Start nav bar -->
 
-            </div>
-          </button>
-          <ul class="navbar-nav ms-lg-auto p-4 p-lg-0">
-            <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-              <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-              <a href="#" class="nav-link">About</a>
-            </li>
-            <li class="nav-item px-3 px-lg-0 py-1 py-lg-4 dropdown">
-              <a href="#" class="nav-link dropdown-toggle" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Team</a></li>
-                <li><a class="dropdown-item" href="#">FAQ</a></li>
-                <li><a class="dropdown-item" href="#">Pricing</a></li>
-              </ul>
-            </li>
-            <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-              <a href="#" class="nav-link">Company</a>
-            </li>
-            <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-              <a href="#" class="nav-link">Blog</a>
-            </li>
-            <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-              <a href="#" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </div>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+      <a class="navbar-brand col-6" href="#">PIZZILLA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse col-6" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item" >
+            <a class="nav-link" href="#story">Our Story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#menu"> Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#branches">Branches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#delivery">Delivery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reservation">Reservation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <div id="carouselExample" class="carousel slide">
+    </div>
+  </nav>
+
+    <!-- End nav bar -->
+
+    <!-- Start Carousel slide -->
+
+    <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="carousel-item active" data-bs-interval="1000">
           <img src="assests/images/2151910279.jpg" class="d-block w-100" alt="...">
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-bs-interval="1000">
           <img src="assests/images/2151910279.jpg" class="d-block w-100" alt="...">
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-bs-interval="2000">
           <img src="assests/images/2151910279.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button"
-        data-bs-target="#carouselExample" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button"
-        data-bs-target="#carouselExample" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
 
-    <section id="content" class="py-5">
-      <div class="container px-4">
+    <!-- End Carousel slide -->
 
-        <div class="row">
-          <div class="col-md-12">
-            <h1 class="py-2 text-center fw-bold">Lorem</h1>
+    <!-- Start About us-->
 
-          </div>
-          <div class="col-md-12 px-lg-0">
-            <div class="welcome-description mt-4 text-center">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Corrupti molestiae voluptatum ipsa mollitia natus sed ea
-                laboriosam odit dolorem fuga obcaecati quidem ab distinctio
-                blanditiis commodi temporibus vero, similique modi!
-                Animi neque obcaecati omnis commodi delectus amet. Molestias
-                unde sunt facere laudantium vero commodi, enim sequi non
-                similique excepturi minima ipsum consequuntur dignissimos
-                tenetur quam asperiores laborum voluptas! Iure, quasi?
-                Ad eum laborum temporibus dolore et tempora a, deleniti enim
-                suscipit accusantium repellendus, fuga dignissimos voluptates
-                unde repellat, optio recusandae nulla animi iste doloremque
-                maiores consectetur. Quidem alias vel illum!
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Corrupti molestiae voluptatum ipsa mollitia natus sed ea
-                laboriosam odit dolorem fuga obcaecati quidem ab distinctio
-                blanditiis commodi temporibus vero, similique modi!
-                Animi neque obcaecati omnis commodi delectus amet. Molestias
-                unde sunt facere laudantium vero commodi, enim sequi non
-                similique excepturi minima ipsum consequuntur dignissimos
-                tenetur quam asperiores laborum voluptas! Iure, quasi?
-                Ad eum laborum temporibus dolore et tempora a, deleniti enim
-                suscipit accusantium repellendus, fuga dignissimos voluptates
-                unde repellat, optio recusandae nulla animi iste doloremque
-                maiores consectetur. Quidem alias vel illum!
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Corrupti molestiae voluptatum ipsa mollitia natus sed ea
-                laboriosam odit dolorem fuga obcaecati quidem ab distinctio
-                blanditiis commodi temporibus vero, similique modi!
-                Animi neque obcaecati omnis commodi delectus amet. Molestias
-                unde sunt facere laudantium vero commodi, enim sequi non
-                similique excepturi minima ipsum consequuntur dignissimos
-                tenetur quam asperiores laborum voluptas! Iure, quasi?
-                Ad eum laborum temporibus dolore et tempora a, deleniti enim
-                suscipit accusantium repellendus, fuga dignissimos voluptates
-                unde repellat, optio recusandae nulla animi iste doloremque
-                maiores consectetur. Quidem alias vel illum!
-              </p>
+    <div class="container-fluid py-4" id="aboutus">
+      <div class="row">
+        <div class="col-6 text-end d-flex align-items-center justify-content-end">
+          <img src="assests/images/close-up-delicious-pizza.jpg" width="40%">
+        </div>
+        <div class="col-6 d-flex flex-column justify-content-center my-5">
+          <h3>About Us</h3>
+          <h5>At Pizzilla, we craft every pizza with heart and passion...</h5>
+          <h5>Using only fresh, high-quality ingredients,</h5>
+          <h5>we bring you a homemade taste you'll love,</h5>
+          <h5>cheesy, and unforgettable in every bite!</h5>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- End About us-->
+
+    <!-- Start Review-->
+
+    <div class="container-fluid py-5 " id="review">
+      <div class="row">
+        <div class="col-6 text-center " id="reviewtext">
+          <h3 >Check out</h3>
+          <h4>what our fam has to say about famtimebkk ...</h4>
+        </div>
+
+        <div class="col-6" id="slidereview">
+          <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleInterval">
+                <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="1000">
+                <img src="assests/images/2151910279.jpg" class="d-block w-100" alt="..." >
+              </div>
+              <div class="carousel-item" data-bs-interval="1000">
+                <img src="assests/images/2151910279.jpg" class="d-block w-100" alt="..." >
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="assests/images/2151910279.jpg" class="d-block w-100" alt="..." >
+              </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
 
+      </div>
+    </div>
+
+    <!-- End Review-->
+
+    <!-- Start Menu -->
+
+      <div class="container mt-5">
+        <div class="row">
+          <div class="card col-3 mx-3" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card col-3 mx-3" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card col-3 mx-3" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card col-3 mx-3" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
           </div>
         </div>
       </div>
 
-    </section>
+    <!-- End Menu -->
+
+    <!-- Start Reservation -->
+
+    <Div class="container mt-5">
+      <div clas="row">
+        <div class="col text-center">
+          <H1>RESERVATION</H1>
+          <h4>FOR SUKHUMVIT 16</h4>
+          <button>Click to reserve a table</button>
+          <h5>or chat with our admin</h5>
+          <button>Click to chat via line</button>
+          <h5>FOR SIAM SQUARE SOI 7,TERMINAL 21 RAMA 3 </h5>
+          <h5>the mall Bangkapi and mega bangna BRANCH</h5><br>
+          <h7>We currently only accept walk-ins at Siam Square Soi 7,</h7><br>
+          <h7>Terminal 21 Rama 3, The Mall Bangkapi and Mega Bangna branch</h7><br>
+        </div>
+      </div>
+    </Div>
+ 
+    <!-- End Reservation -->
+
+    <!-- Start Contact Us -->
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-3">
+          <h1>CONTACT US</h1>
+          <div class="align-items-center">
+            <img src="...">
+            <img src="...">
+            <img src="...">
+          </div>
+        </div>
+        <div class="col-9 text-center">
+          <h1>Business & Collaborations</h1>
+          <h6>We’d love to hear from you!</h6>
+          <h6>For partnerships, media, or business inquiries, reach us at:</h6>
+          <button>CONTACTPIZZILLA@TNI.AC.TH</button>
+        </div>
+
+      </div>
+    </div>
+
+      
+
+    <!-- End Contact Us -->
+
+
+
+    <!-- Start Footer -->
+
+    <footer>Pizzilla</footer>
+
+    <!-- End Footer -->
+
+    
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
