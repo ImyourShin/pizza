@@ -104,6 +104,102 @@ body{
 
 /* End Review */
 
+/* Start Discover */
+
+#topic {
+    width: 100%;
+    height: 85px;
+    background: var(--red);
+}
+
+.promo-card {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.promo-card:hover {
+  transform: scale(1.02);
+}
+
+.promo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.promo-title {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+#btn button {
+  background-color: var(--red);
+  color: var(--white);
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#btn button:hover {
+  background-color: var(--red); /* สีแดงอ่อนลง */
+  color: var(--white);
+  transform: scale(1.05); /* ขยายเล็กน้อย */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+}
+
+/* End Discover */
+
+/* Start Footer */
+
+#Footer {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+#Footer h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+#Footer a {
+  color: var(--gray);
+  text-decoration: none;
+  margin-bottom: 4px;
+  font-size: 10px;
+}
+
+#Footer a:hover {
+  text-decoration: underline;
+  color: var(--red-light); /* เพิ่มลูกเล่นสีเวลา hover */
+}
+
+
+
+#Footer .copyright {
+  
+  margin-top: 5px;
+  padding-top: 15px;
+  font-size: 13px;
+  color: var(--gray);
+}
+
+
+/* End Footer */
+
 
 .lni-menu-hamburger-1{
     font-size: 1.5rem;
