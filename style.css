@@ -253,7 +253,7 @@ body{
 
 /* รูปภาพ */
 .menu-img {
-  height: 90px;
+  height: 150px;
   object-fit: contain;
   margin-bottom: 10px;
 }
@@ -262,7 +262,7 @@ body{
 .menu-label {
   color: #d32f2f;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin: 0;
 }
 
