@@ -205,14 +205,11 @@ body{
     color: #3e4455;
 }
 
-/* =========================
-   Pizza Menu Section
-   ========================= */
+
+/* === Menu Section === */
 #menu {
   background-color: #ffffff;
-  padding: 80px 20px;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  padding: 60px 15px;
 }
 
 .menu-title {
@@ -222,68 +219,88 @@ body{
   margin-bottom: 40px;
 }
 
+/* กริดเมนู: Desktop = 5 คอลัมน์ */
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columns */
-  gap: 25px;
-  max-width: 1100px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 1200px;
   margin: 0 auto;
-  justify-content: center;
+  padding: 0 15px;
 }
 
+/* ลิงก์กล่องเมนู */
 .menu-link {
   text-decoration: none;
   display: block;
   color: inherit;
-  transition: transform 0.3s;
   border-radius: 12px;
+  transition: transform 0.3s;
 }
 
 .menu-link:hover {
   transform: translateY(-5px);
-  cursor: pointer;
 }
 
+/* กล่องเมนู */
 .menu-box {
   background-color: #fff;
-  border: 2px solid transparent;
   border-radius: 12px;
-  padding: 20px;
+  padding: 16px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
   text-align: center;
 }
 
-.menu-box:hover {
-  border-color: #d32f2f;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
+/* รูปภาพ */
 .menu-img {
-  height: 150px;
+  height: 90px;
   object-fit: contain;
   margin-bottom: 10px;
 }
 
+/* ชื่อเมนู */
 .menu-label {
   color: #d32f2f;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0;
 }
 
-/* Responsive: Adjust columns for smaller screens */
+/* ===== Responsive ===== */
+
+/* Tablet ขนาดกลาง: 3 คอลัมน์ */
 @media (max-width: 992px) {
   .menu-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .menu-img {
+    height: 80px;
+  }
 }
 
-@media (max-width: 576px) {
+/* มือถือทั่วไป: 2 คอลัมน์ */
+@media (max-width: 768px) {
   .menu-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .menu-img {
+    height: 70px;
+  }
 }
+
+/* มือถือจอเล็ก: 1 คอลัมน์ */
+@media (max-width: 480px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .menu-img {
+    height: 60px;
+  }
+}
+
+
+
+
 
 /* =========================
    Dropdown Hover (Desktop)
