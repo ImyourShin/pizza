@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>PIZZLA | Home</title>
     <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
     <link rel="stylesheet" href="style.css">
     
@@ -17,53 +17,77 @@
 
     <!-- Start nav bar -->
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
-      <a class="navbar-brand col-6" href="#">PIZZILLA</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <a class="navbar-brand" href="#">PIZZILLA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse col-6" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item" >
-            <a class="nav-link" href="#story">Our Story</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#menu"> Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#branches">Branches</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#delivery">Delivery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#reservation">Reservation</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#flash-deal">Deals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#topic">Promos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Footer">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="assests/images/shopping-bag.png" alt="" class="logo-img" style="width:32px; height:32px;">
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
     <!-- End nav bar -->
+   <!-- Delivery/Pickup Toggle Section (place below navbar, above carousel) -->
+<div class="order-type-toggle d-flex align-items-center py-3" style="background:#fff; margin-top:64px;">
+  <span class="me-3" style="font-weight:600; color:#c0392b; font-size:1.05rem;">
+    กรุณาเลือกร้านและประเภทการสั่งซื้อ
+  </span>
+  <button class="order-btn active ms-2" id="deliveryBtn" type="button">Delivery</button>
+  <button class="order-btn ms-2" id="pickupBtn" type="button">Pickup</button>
+</div>
 
+<script>
+  // Toggle active class and background color
+  document.addEventListener('DOMContentLoaded', function() {
+    const deliveryBtn = document.getElementById('deliveryBtn');
+    const pickupBtn = document.getElementById('pickupBtn');
+    [deliveryBtn, pickupBtn].forEach(btn => {
+      btn.addEventListener('click', function() {
+        deliveryBtn.classList.remove('active');
+        pickupBtn.classList.remove('active');
+        deliveryBtn.style.background = "#fff";
+        pickupBtn.style.background = "#fff";
+        this.classList.add('active');
+        this.style.background = "#c0392b";
+      });
+    });
+  });
+</script>
     <!-- Start Carousel slide -->
 
     <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="1000">
+        <div class="carousel-item active" data-bs-interval="5000">
           <img src="assests/images/2151910279.jpg" class="d-block w-100" alt="...">
         </div>
-        <div class="carousel-item" data-bs-interval="1000">
-          <img src="assests/images/2151910279.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="assests/images/freshly-cooked-linguini-with-prawn-seafood-generated-by-ai.jpg" class="d-block w-100" alt="...">
         </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="assests/images/2151910279.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="assests/images/grilled-buffalo-chicken-wings-rustic-wood-plate-generated-by-ai.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -78,78 +102,94 @@
 
     <!-- End Carousel slide -->
 
+
+      <!-- Start Flash Deal Promotion Section -->
+<section id="flash-deal" class="py-4 mt-5" style="background: #ffffff;">
+  <div class="container text-center">
+    <h2 class="mb-3" style="color:#c0392b; font-weight:bold;">
+      ⚡ Flash Deal Promotion ⚡
+    </h2>
+    <img src="assests/images/Banner.png" alt="Flash Deal Promotion" class="img-fluid rounded shadow"
+         style="max-width: 1000px; width: 100%;">
+    <!-- <div class="mt-3">
+      <a href="#menu" class="btn btn-danger px-4 py-2">Order Now</a>
+    </div> -->
+  </div>
+</section>
+<!-- End Flash Deal Promotion Section -->
+
 <!-- Start Menu 1-->
-<div class="container-fluid py-4" id="menu">
+<div class="container-fluid py-4" id="menu" style="background: #f8f6f6;">
   <div class="text-center mb-4">
     <h3 class="menu-title">🍕 Menu </h3>
   </div>
 
   <div class="menu-grid">
 
-    <a href="menu/promotion.html" class="menu-link">
+    <a href="#menu" class="menu-link">
       <div class="menu-box">
         <h6 class="menu-label">Promotion</h6>
         <img src="assests/images/Promotions.png" alt="Promotion" class="menu-img">
       </div>
     </a>
 
-    <a href="menu/combo.html" class="menu-link">
+    <a href="#menu" class="menu-link">
       <div class="menu-box">
         <h6 class="menu-label">Combo</h6>
         <img src="assests/images/combo.png" alt="Combo" class="menu-img">
       </div>
     </a>
 
-    <a href="menu/pizza.html" class="menu-link">
+    <a href="#menu" class="menu-link">
       <div class="menu-box">
         <h6 class="menu-label">Pizza</h6>
         <img src="assests/images/pizza.png" alt="Pizza" class="menu-img">
       </div>
     </a>
 
-    <a href="menu/melts.html" class="menu-link">
+    <a href="#menu" class="menu-link">
       <div class="menu-box">
         <h6 class="menu-label">Melts</h6>
         <img src="assests/images/Melts.png" alt="Melts" class="menu-img">
       </div>
     </a>
 
-    <a href="menu/salad.html" class="menu-link">
+    <a href="#menu" class="menu-link">
       <div class="menu-box">
         <h6 class="menu-label">Salad</h6>
         <img src="assests/images/salad.png" alt="Salad" class="menu-img">
       </div>
     </a>
 
-    <a href="menu/steak.html" class="menu-link">
+    <a href="#menu" class="menu-link">
       <div class="menu-box">
         <h6 class="menu-label">Steak</h6>
         <img src="assests/images/steak.png" alt="Steak" class="menu-img">
       </div>
     </a>
 
-    <a href="menu/spaghetti.html" class="menu-link">
+    <a href="#menu" class="menu-link">
       <div class="menu-box">
         <h6 class="menu-label">Spaghetti</h6>
         <img src="assests/images/Spaghetti.png" alt="Spaghetti" class="menu-img">
       </div>
     </a>
 
-    <a href="menu/appetizers.html" class="menu-link">
+    <a href="#menu" class="menu-link">
       <div class="menu-box">
         <h6 class="menu-label">Appetizers</h6>
         <img src="assests/images/Appetizers.png" alt="Appetizers" class="menu-img">
       </div>
     </a>
 
-    <a href="menu/wings.html" class="menu-link">
+    <a href="#menu" class="menu-link">
       <div class="menu-box">
         <h6 class="menu-label">Wings</h6>
         <img src="assests/images/Wings.png" alt="Wings" class="menu-img">
       </div>
     </a>
 
-    <a href="menu/dessert.html" class="menu-link">
+    <a href="#menu" class="menu-link">
       <div class="menu-box">
         <h6 class="menu-label">Drink & Dessert</h6>
         <img src="assests/images/drink&dessert.png" alt="Drink & Dessert" class="menu-img">
@@ -163,7 +203,7 @@
 
     <!-- Start Discover More Promos -->
 
-      <div class="container-fluid py-4 sbg-white">
+      <div class="container-fluid py-4 sbg-white" style="background: #f8f6f6;">
         <div class="row">
           <div class="col-12 text-center  text-white align-content-center" id="topic">
             <h3>
@@ -244,6 +284,8 @@
 
     <!-- End Discover More Promos -->
 
+  
+
 
 <!--  Start Footer -->
     <div class="container-fluid bg-black text-white pt-5" id="Footer">
@@ -283,10 +325,18 @@
 
         <!-- Copyright -->
         <div class="row copyright">
-          <div class="col-12 text-center border-top pt-4 ">
-            <p>@PIZZILLABKK</p>
-          </div>
-        </div>
+  <div class="col-12 text-center border-top pt-4">
+    <p style="font-size:1.1rem; letter-spacing:2px; color:#bbb; font-weight:bold; margin-bottom: 0.5rem;">
+      @PIZZILLABKK
+    </p>
+    <div class="footer-members mt-3 pizzilla-footer-member">
+      <div class="footer-member-title">Member</div>
+      <div><span class="footer-member-id">2213111129</span> Teshin Bubpha</div>
+      <div><span class="footer-member-id">2213111343</span> Korawit Jumuang</div>
+      <div><span class="footer-member-id">2213111368</span> Gun Eiampornsin</div>
+    </div>
+  </div>
+</div>
       </div>
     </div>
 
